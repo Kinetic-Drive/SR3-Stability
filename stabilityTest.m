@@ -8,7 +8,7 @@ fontSize = 22;
 
 
 folder = fileparts(which('x40MphLineTest.mp4')); % Determine where demo folder is (works with all versions).
-% Pick one of the two demo movies shipped with the Image Processing Toolbox.
+% Enter movie/video name.
 % Comment out the other one.
 movieFullFileName = fullfile(folder, '40 mph line test.mp4');
 % movieFullFileName = fullfile(folder, 'traffic.avi');
@@ -52,7 +52,7 @@ try
 		[folder, baseFileName, extentions] = fileparts(movieFullFileName);
 		% Make up a special new output subfolder for all the separate
 		% movie frames that we're going to extract and save to disk.
-		% (Don't worry - windows can handle forward slashes in the folder name.)
+		
 		folder = pwd;   % Make it a subfolder of the folder where this m-file lives.
 		outputFolder = sprintf('%s/Movie Frames from %s', folder, baseFileName);
 		% Create the folder if it doesn't exist already.
